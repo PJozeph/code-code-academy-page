@@ -1,0 +1,21 @@
+<ion-card>
+    <ion-card-content>
+        <section class="testimonial-card">
+            <div class="top">
+                <ion-avatar>
+                    <img [src]="testimonial.image" />
+                </ion-avatar>
+                <ion-text color="text-darkest">
+                    <h1>
+                        {{ testimonial.name }}
+                    </h1>
+                </ion-text>
+            </div>
+            <ion-text
+                color="ion-text-center"
+                color="text-medium">
+                {{ testimonial.testimonial }}
+            </ion-text>
+        </section>
+    </ion-card-content>
+</ion-card>

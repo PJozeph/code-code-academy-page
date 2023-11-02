@@ -1,0 +1,24 @@
+ion-content {
+    --background: transparent;
+}
+
+.tech-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.title {
+    /* Huge S */
+    font-family: Inter;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%; /* 80px */
+    color: #2E3A48;
+}

@@ -1,0 +1,26 @@
+.header-wrapper {
+    ion-toolbar {
+        --ion-toolbar-background: transparent;
+    }
+}
+
+ion-content {
+    --background: #ffff url('../../assets/background.png') no-repeat center center / cover;
+    --ion-backdrop-opacity: 0.3;
+}
+
+.services-wrapper {
+    background: url('../../assets/background_code.png') no-repeat right;
+}
+
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    .social-medias {
+        gap: 0.5rem;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}

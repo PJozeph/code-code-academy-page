@@ -1,0 +1,34 @@
+<ion-card>
+    <ion-card-content>
+        <section class="card-container">
+            <ion-avatar>
+                <img src="{{ service.image }}" />
+            </ion-avatar>
+            <ion-text
+                class="ion-text-center"
+                color="text-darkest">
+                <h1>{{ service.title }}</h1>
+            </ion-text>
+            <ion-text
+                color="text-medium"
+                class="ion-text-center ion-justify-content-center">
+                {{ service.description }}
+            </ion-text>
+            <ion-button
+                size="small"
+                fill="outline"
+                shape="round"
+                >9.999 HUF / óra</ion-button
+            >
+            <ion-button
+                fill="clear"
+                size="small"
+                color="warning">
+                <ion-icon
+                    name="chevron-forward-outline"
+                    slot="end"></ion-icon>
+                Részletek</ion-button
+            >
+        </section>
+    </ion-card-content>
+</ion-card>

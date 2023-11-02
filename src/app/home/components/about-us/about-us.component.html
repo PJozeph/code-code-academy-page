@@ -1,0 +1,41 @@
+<ion-grid>
+    <ion-row  class="ion-align-items-center">
+        <ion-col
+            size-xl="5"
+            offset-xl="1">
+            <div class="about-us">
+                <!-- <ion-button
+                    color="primary"
+                    shape="round"
+                    >Rolunk</ion-button
+                > -->
+                <ion-text color="text-medium" class="ion-text-start">
+                    Vállalkozásunk szenvedélyesen oktat és mentorál fejlesztőket, segítve őket az informatikai világ folyamatos változásában. Emellett egyedi szoftvermegoldások tervezését és kivitelezését is vállaljuk, hogy ügyfeleink legmagasabb elvárásait is kielégítsük
+                </ion-text>
+                <ion-img src="../../../../assets/Logo.svg"></ion-img>
+            </div>
+        </ion-col>
+        <ion-col
+            size-xl="5"
+            class="ion-text-center">
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        <app-about-us-card [aboutUs]="aboutUS[0]"></app-about-us-card>
+                    </ion-col>
+                    <ion-col>
+                        <app-about-us-card [aboutUs]="aboutUS[1]"></app-about-us-card>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col>
+                        <app-about-us-card [aboutUs]="aboutUS[2]"></app-about-us-card>
+                    </ion-col>
+                    <ion-col>
+                        <app-about-us-card [aboutUs]="aboutUS[3]"></app-about-us-card>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-col>
+    </ion-row>
+</ion-grid>

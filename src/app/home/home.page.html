@@ -1,0 +1,65 @@
+<ion-content
+    class="ion-nopadding"
+    fullscreen>
+    <ion-grid>
+        <ion-row>
+            <ion-col
+                size-xl="2"
+                size-lg="2"
+                size-md="3"
+                size-sm="4"
+                size-xs="5">
+                <ion-img src="../../assets/Logo.svg"></ion-img>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <app-introduction></app-introduction>
+    <ion-grid>
+        <ion-row>
+            <ion-col
+                size-md="4"
+                offset-md="2">
+                <app-testimonial-card [testimonial]="testimonials[0]"></app-testimonial-card>
+            </ion-col>
+            <ion-col size-md="4">
+                <app-testimonial-card [testimonial]="testimonials[1]"></app-testimonial-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <div class="services-wrapper">
+        <app-services></app-services>
+    </div>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <ion-text color="text-darkest">
+        <h1 class="ion-text-center">Mentorok</h1>
+    </ion-text>
+    <app-teachers></app-teachers>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <app-about-us></app-about-us>
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <hr />
+    <app-news-letter></app-news-letter>
+    <app-footer></app-footer>
+</ion-content>

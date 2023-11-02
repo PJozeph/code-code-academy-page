@@ -1,0 +1,16 @@
+
+ion-card {
+    background: transparent;
+    box-shadow: none;
+    height: 100%;
+    ion-card-content {
+        height: 100%;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
