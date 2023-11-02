@@ -8,24 +8,19 @@
             size-xs="12"
             offset-md="0"
             offset-xs="0"
-            offset-xl="2">
+            offset-xl="1">
             <ion-card no-padding>
                 <ion-card-content>
                     <section class="card-container">
-                        <ion-text
-                            color="text-darkest"
-                            class="ion-text-center">
-                            <h1>Szolgáltatások</h1>
-                        </ion-text>
-                        <ion-text color="text-medium">
-                            Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                            veritatis.
-                        </ion-text>
                         <ion-button
                             color="success"
                             shape="round"
                             >Szolgáltatások</ion-button
                         >
+                        <ion-text color="text-medium">
+                            Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                            veritatis.
+                        </ion-text>
                     </section>
                 </ion-card-content>
             </ion-card>
@@ -52,6 +47,14 @@
             size-sm="6"
             size-xs="12">
             <app-services-card [service]="services[2]"></app-services-card>
+        </ion-col>
+        <ion-col
+            size-xl="2"
+            size-lg="3"
+            size-md="6"
+            size-sm="6"
+            size-xs="12">
+            <app-services-card [service]="services[3]"></app-services-card>
         </ion-col>
     </ion-row>
 </ion-grid>

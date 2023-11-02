@@ -15,15 +15,17 @@
                 {{ service.description }}
             </ion-text>
             <ion-button
+                *ngIf="service.price"
                 size="small"
                 fill="outline"
                 shape="round"
-                >9.999 HUF / óra</ion-button
+                >{{ service.price }} / óra</ion-button
             >
             <ion-button
                 fill="clear"
                 size="small"
-                color="warning">
+                color="warning"
+                (click)="onDetailsClick()">
                 <ion-icon
                     name="chevron-forward-outline"
                     slot="end"></ion-icon>

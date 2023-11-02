@@ -12,19 +12,26 @@ export class ServicesComponent implements OnInit {
             title: 'Mentorálás',
             description: 'Személyre szabott oktatás',
             image: '../../../assets/student.svg',
-            price: 1000,
+            id: 'personal_mentor',
+            price: 9.999,
         },
         {
             title: 'Mentorálás Cégeknek',
             description: 'Cég által használt Angular tech stack oktatása',
+            id: 'mentor_for_business',
             image: '../../../assets/mentor_for_business.svg',
-            price: 1000,
         },
         {
             title: 'Tanfolyamok',
             description: 'Rendszeres tanóránkénti struktúra',
+            id: 'courses',
             image: '../../../assets/courses.svg',
-            price: 1000,
+        },
+        {
+            title: 'Egyedi Webapp fejlesztés',
+            description: 'Rendszeres tanóránkénti struktúra',
+            id: 'webapp_development',
+            image: '../../../assets/background_code.png',
         },
     ];
 

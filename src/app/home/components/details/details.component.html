@@ -1,0 +1,81 @@
+<ion-content class="details-container">
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <app-header></app-header>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <div>image</div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col
+                size="8"
+                offset="2">
+                <ng-container [ngSwitch]="activeLayout">
+                    <ng-container
+                        *ngSwitchCase="'mentoring'"
+                        [ngTemplateOutlet]="mentoring"></ng-container>
+                    <ng-container
+                        *ngSwitchCase="'mentoring_for_companies'"
+                        [ngTemplateOutlet]="mentoring"></ng-container>
+                    <ng-container
+                        *ngSwitchCase="'courses'"
+                        [ngTemplateOutlet]="mentoring"></ng-container>
+                    <ng-container
+                        *ngSwitchCase="'software'"
+                        [ngTemplateOutlet]="mentoring"></ng-container>
+                </ng-container>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col> </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <app-footer></app-footer>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<ng-template #mentoring>
+    <ion-text>
+        <ion-text color="primary"
+            ><strong> Szeretnél megtanulni programozni vagy szeretnéd fejleszteni meglévő tudásod?</strong>
+        </ion-text>
+        Ne fizess be drága tanfolyamokra. A Code Code Academy személyre szabott mentorálásával hatékonyabban és
+        gyorsabban tanulhatsz. A mentorok útmutatást nyújtanak, hogy mit és hogyan kell tanulnod ahhoz, hogy elérd a
+        céljaidat.
+    </ion-text>
+    <hr />
+    <hr />
+    <ul class="ion-text-center">
+        <li>
+            <ion-text color="primary"><strong> INGYENES konzultáció ! </strong></ion-text>
+        </li>
+        <li>
+            <ion-text color="primary"><strong> INGYENES első egy óra ! </strong></ion-text>
+        </li>
+    </ul>
+    <hr />
+    <hr />
+    <ion-text class="ion-text-center">
+        Egyetlen tanfolyam vagy könyv sem tudja pótolni a személyre szabott mentorálást, mindenki másképpen tanul. Ha
+        van olyan program, amit megszeretnél írni, együtt megcsináljuk, ha nincs, adunk számodra feladatokat, amivel
+        fejlődhetsz.
+    </ion-text>
+    <hr />
+    <hr />
+    <ion-text class="ion-text-center">
+        Ha nálunk tanulsz, <ion-text color="primary"><strong>Discord</strong></ion-text> szerverünk tagja lehetsz, ahol
+        tanulóink megosztják egymással tapasztalataikat.
+    </ion-text>
+    <hr />
+    <hr />
+    <ion-text class="ion-text-center">
+        Rugalmasak vagyunk, tehát akkor és annyi órát veszel, amennyit Te szeretnél. Amit javaslunk, az a minimum heti 2
+        óra.
+    </ion-text>
+</ng-template>

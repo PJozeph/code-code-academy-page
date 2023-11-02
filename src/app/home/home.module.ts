@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { AszfComponent } from './components/aszf/aszf.component';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
     imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule, ReactiveFormsModule, RouterModule],
@@ -35,6 +36,7 @@ import { AszfComponent } from './components/aszf/aszf.component';
         FooterComponent,
         HeaderComponent,
         AszfComponent,
+        DetailsComponent,
     ],
     exports: [ServicesComponent],
 })

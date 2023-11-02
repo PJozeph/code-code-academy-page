@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ServiceItem } from '../../modal/service.modal';
 
 @Component({
@@ -6,10 +7,13 @@ import { ServiceItem } from '../../modal/service.modal';
     templateUrl: './services-card.component.html',
     styleUrls: ['./services-card.component.scss'],
 })
-export class ServicesCardComponent implements OnInit {
+export class ServicesCardComponent {
     @Input() service: ServiceItem = {} as ServiceItem;
 
-    constructor() {}
+    router: Router = inject(Router);
 
-    ngOnInit() {}
+    onDetailsClick() {
+        console.log("this.service.id");
+        this.router.navigate(['details', this.service.id]);
+    }
 }
