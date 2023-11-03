@@ -1,13 +1,13 @@
 <ion-card>
-        <img
-            alt="Silhouette of mountains"
-            src="../../../../assets/profile_pictures/jozsef-image.jpg" />
+    <img
+        alt="Silhouette of mountains"
+        src="../../../../assets/profile_pictures/jozsef-image.jpg" />
     <ion-card-header>
-        <ion-card-title class="ion-text-center">Pallagi József</ion-card-title>
-        <ion-card-subtitle class="ion-text-center">Full-stack Developer</ion-card-subtitle>
+        <ion-card-title class="ion-text-center">{{ teacher.name }}</ion-card-title>
+        <!-- <ion-card-subtitle class="ion-text-center">{{ teacher.description}}</ion-card-subtitle> -->
     </ion-card-header>
 
     <ion-card-content class="ion-text-center">
-        Here's a small text description for the card content. Nothing more, nothing less.
+        {{ teacher.description }}
     </ion-card-content>
 </ion-card>

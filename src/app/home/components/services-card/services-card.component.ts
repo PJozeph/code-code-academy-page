@@ -13,7 +13,6 @@ export class ServicesCardComponent {
     router: Router = inject(Router);
 
     onDetailsClick() {
-        console.log("this.service.id");
         this.router.navigate(['details', this.service.id]);
     }
 }

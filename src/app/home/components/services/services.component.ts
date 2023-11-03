@@ -24,7 +24,8 @@ export class ServicesComponent implements OnInit {
         {
             title: 'Tanfolyamok',
             description: 'Rendszeres tanóránkénti struktúra',
-            id: 'courses',
+            id: 'course',
+            price: 79.999,
             image: '../../../assets/courses.svg',
         },
         {

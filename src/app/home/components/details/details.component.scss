@@ -1,5 +1,5 @@
 .details-container {
-    --background: #ffff url('/../assets/background.png') no-repeat center center / cover;
+    // background: #ffff url('/../assets/background.png') no-repeat center center / cover;
 }
 
 ion-text {
@@ -8,4 +8,9 @@ ion-text {
 
 ul {
     list-style: none;
+    padding: 0;
+}
+
+ion-img {
+    height: 3rem;
 }

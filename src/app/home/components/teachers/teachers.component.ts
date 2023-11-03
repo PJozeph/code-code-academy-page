@@ -10,11 +10,11 @@ export class TeachersComponent  implements OnInit {
 
   teachers : Teacher [] = [
     {
-      name: 'Kiss József',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.',
+      name: 'Pallagi József',
+      description: 'I am a freelancer Frontend developer with over 6 years of experience',
       image: 'https://via.placeholder.com/150',
-      linkedin: 'https://www.linkedin.com/in/j%C3%B3zsef-kiss-9a1b0a1a4/',
-      github: '',
+      linkedin: 'https://www.linkedin.com/in/jozsef-pallagi/',
+      github: 'https://github.com/PJozeph',
     }
   ]
 

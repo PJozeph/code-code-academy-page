@@ -11,7 +11,9 @@
             offset-md="4"
             offset-sm="4"
             offset-xs="2">
-            <app-teacher-card></app-teacher-card>
+            <app-teacher-card
+                *ngFor="let teacher of teachers"
+                [teacher]="teacher"></app-teacher-card>
         </ion-col>
     </ion-row>
 </ion-grid>

@@ -1,29 +1,28 @@
 <ion-content class="details-container">
-    <ion-grid>
+    <ion-grid no-padding>
         <ion-row>
             <ion-col>
                 <app-header></app-header>
             </ion-col>
         </ion-row>
-        <ion-row>
-            <ion-col>
-                <div>image</div>
-            </ion-col>
-        </ion-row>
+        <hr />
+        <hr />
+        <hr />
+        <hr />
         <ion-row>
             <ion-col
                 size="8"
                 offset="2">
                 <ng-container [ngSwitch]="activeLayout">
                     <ng-container
-                        *ngSwitchCase="'mentoring'"
+                        *ngSwitchCase="'personal_mentor'"
                         [ngTemplateOutlet]="mentoring"></ng-container>
                     <ng-container
-                        *ngSwitchCase="'mentoring_for_companies'"
+                        *ngSwitchCase="'mentor_for_business'"
                         [ngTemplateOutlet]="mentoring"></ng-container>
                     <ng-container
-                        *ngSwitchCase="'courses'"
-                        [ngTemplateOutlet]="mentoring"></ng-container>
+                        *ngSwitchCase="'course'"
+                        [ngTemplateOutlet]="course"></ng-container>
                     <ng-container
                         *ngSwitchCase="'software'"
                         [ngTemplateOutlet]="mentoring"></ng-container>
@@ -31,15 +30,122 @@
             </ion-col>
         </ion-row>
         <ion-row>
-            <ion-col> </ion-col>
+            <ion-col
+                size-xl="6"
+                offset-xl="3"
+                size-sm="8"
+                offset-sm="2">
+                <form [formGroup]="formGroup">
+                    <ion-text color="text-darkest">
+                        <h1 class="ion-text-center">Regisztráció</h1>
+                    </ion-text>
+                    <ion-item>
+                        <ion-input
+                            label="Email"
+                            formControlName="email"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-input
+                            label="Név"
+                            formControlName="name"></ion-input
+                    ></ion-item>
+                    <ion-item>
+                        <ion-input
+                            label="Telefonszám"
+                            formControlName="phone"></ion-input>
+                    </ion-item>
+                </form>
+            </ion-col>
         </ion-row>
         <ion-row>
-            <ion-col>
-                <app-footer></app-footer>
+            <ion-col
+                class="ion-text-center"
+                size="6"
+                offset="3">
+                <ion-button
+                    shape="round"
+                    [disabled]="!formGroup.valid">
+                    Küldés</ion-button
+                >
             </ion-col>
         </ion-row>
     </ion-grid>
 </ion-content>
+<ion-footer no-padding>
+    <ion-toolbar>
+        <app-footer></app-footer>
+    </ion-toolbar>
+</ion-footer>
+
+<ng-template #course>
+    <ion-text>
+        <ion-text
+            color="primary"
+            class="ion"
+            ><strong> <h1 class="ion-text-center">Kezdő Angular Online Tanfolyam</h1></strong>
+        </ion-text>
+    </ion-text>
+    <ion-text>
+        A tanfolyamot inkább gyakorlatiasan fogjuk megtartani, sok kis programot fogunk írni. Elméleti rész minimális
+        lesz. Az orákról videófelvétel készül, amit az összes tanulónak elérhető lesz.
+    </ion-text>
+    <hr />
+    <hr />
+    <div>
+        <ion-text color="primary"> Limitált létszám max 10 fő !</ion-text>
+    </div>
+    <div>
+        <ion-text color="primary"> Január 13-án kezdődik, az utolsó óra Február 2-án lesz. </ion-text>
+    </div>
+    <ion-text color="primary">
+        <h1
+            class="ion-text-center"
+            color="primary">
+            Tematika
+        </h1>
+    </ion-text>
+    <div>
+        <ul>
+            <li *ngFor="let subect of courseSubjects">
+                <ion-text>{{ subect }}</ion-text>
+            </li>
+        </ul>
+    </div>
+    <ion-text color="primary">
+        <h1
+            class="ion-text-center"
+            color="primary">
+            Órarend
+        </h1>
+    </ion-text>
+    <div>
+        <ion-text> 09:00 - 10:30 → 1. óra </ion-text>
+    </div>
+    <div>
+        <ion-text> 10:45 → 12:15 → 2. óra </ion-text>
+    </div>
+    <div>
+        <hr />
+        <ion-text> EBÉDSZÜNET </ion-text>
+        <hr />
+    </div>
+    <div>
+        <ion-text> 13:15 → 14:45 → 3. óra </ion-text>
+    </div>
+    <div>
+        <ion-text> 15:00→ 16:30 → 4. óra </ion-text>
+    </div>
+    <ion-text color="primary">
+        <h1
+            class="ion-text-center"
+            color="primary">
+            ÁR
+        </h1>
+    </ion-text>
+    <div>
+        <ion-text> Bruttó 79.999 </ion-text>
+    </div>
+</ng-template>
 <ng-template #mentoring>
     <ion-text>
         <ion-text color="primary"
