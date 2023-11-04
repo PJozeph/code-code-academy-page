@@ -66,11 +66,16 @@
                     size="6"
                     offset="3">
                     <ion-button
+                        *ngIf="!formSending"
                         type="submit"
                         shape="round"
                         [disabled]="!formGroup.valid">
                         Küldés</ion-button
                     >
+                    <ion-spinner
+                        *ngIf="formSending"
+                        color="primary"
+                        name="dots"></ion-spinner>
                 </ion-col>
             </ion-row>
         </form>

@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 import { EmailRequest } from '../../modal/email-request-modal';
 import { EmailService } from '../../services/email.service';
 
@@ -12,8 +13,13 @@ import { EmailService } from '../../services/email.service';
 export class DetailsComponent implements OnInit {
     formBuilder: FormBuilder = inject(FormBuilder);
     emailService: EmailService = inject(EmailService);
+    tostController: ToastController = inject(ToastController);
+
+    public formSending: boolean = false;
+    public emailSent: boolean = false;
 
     activatedRoute: any = inject(ActivatedRoute);
+
     public selectedService: string = '';
 
     public courseSubjects: string[] = [
@@ -53,8 +59,17 @@ export class DetailsComponent implements OnInit {
     public onSubmit() {
         const emailRequest: EmailRequest = this.formGroup.getRawValue();
         emailRequest.subject = this.selectedService;
+        this.formSending = true;
         this.emailService.send(emailRequest).subscribe(() => {
             this.formGroup.reset();
+            this.formSending = false;
+            const toast = this.tostController.create({
+                message: 'Jelentkezés elküldve!',
+                duration: 3500,
+                position: 'bottom',
+                color: 'success',
+            });
+            toast.then(toast => toast.present());
         });
     }
 }
