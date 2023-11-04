@@ -1,3 +1,5 @@
 node_modules
 .angular
 www
+.firebaserc
+firebase.json
