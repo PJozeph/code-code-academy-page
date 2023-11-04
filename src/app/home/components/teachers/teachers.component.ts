@@ -17,10 +17,10 @@ export class TeachersComponent implements OnInit {
         },
         {
             name: 'Hummer András',
-            description: 'Egy tapasztalt szoftverfejlesztő, akinek bizonyított referenciái vannak',
+            description: 'Tapasztalt szoftverfejlesztő, akinek bizonyított referenciái vannak',
             image: '../../../../assets/profile_pictures/hummer_andris.jpeg',
-            linkedin: 'https://www.linkedin.com/in/jozsef-pallagi/',
-            github: ' ',
+            linkedin: 'https://www.linkedin.com/in/ahummer/',
+            github: 'https://github.com/hnhpo',
         },
     ];
 

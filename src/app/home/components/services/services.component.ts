@@ -29,8 +29,8 @@ export class ServicesComponent implements OnInit {
             image: '../../../assets/courses.svg',
         },
         {
-            title: 'Egyedi Webapp fejlesztés',
-            description: 'Rendszeres tanóránkénti struktúra',
+            title: 'Egyedi Fejlesztés',
+            description: 'Egeyedi igények alapján fejlesztünk',
             id: 'webapp_development',
             image: '../../../assets/background_code.png',
         },
