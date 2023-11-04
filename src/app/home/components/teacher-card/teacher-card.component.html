@@ -1,13 +1,24 @@
 <ion-card>
-    <img
-        alt="Silhouette of mountains"
-        src="../../../../assets/profile_pictures/jozsef-image.jpg" />
+    <img [src]="teacher.image" />
     <ion-card-header>
         <ion-card-title class="ion-text-center">{{ teacher.name }}</ion-card-title>
-        <!-- <ion-card-subtitle class="ion-text-center">{{ teacher.description}}</ion-card-subtitle> -->
     </ion-card-header>
 
     <ion-card-content class="ion-text-center">
-        {{ teacher.description }}
+        <ion-text>
+            {{ teacher.description }}
+        </ion-text>
     </ion-card-content>
+    <div >
+        <ion-icon
+            name="logo-linkedin"
+            size="small"
+            class="ion-margin-horizontal linkedin"
+            (click)="onLinkClick(teacher.linkedin)"></ion-icon>
+        <ion-icon
+            name="logo-github"
+            size="small"
+            class="github"
+            (click)="onLinkClick(teacher.github)"></ion-icon>
+    </div>
 </ion-card>

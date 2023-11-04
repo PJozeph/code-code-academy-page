@@ -8,6 +8,35 @@
         display: flex;
         justify-content: center;
     }
+
+    .aszf {
+        cursor: pointer;
+        color: #6533e2;
+    }
+
+    .aszf:hover {
+        color: #6533e2;
+    }
+
+    .facebook {
+        color: #3b5998;
+    }
+
+    .tiktok {
+        color: #000000;
+    }
+
+    .linkedin {
+        color: #0e76a8;
+    }
+
+    .youtube {
+        color: #ff0000;
+    }
+
+    ion-icon {
+        cursor: pointer;
+    }
 }
 
 // .footer-wrapper {

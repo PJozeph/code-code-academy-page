@@ -11,22 +11,22 @@ export class AboutUsComponent implements OnInit {
         {
             title: 'Tanulók száma',
             number: 3,
-            description: 'Lorem ipsum dol',
+            description: '100% Elégedettség',
         },
         {
             title: 'Mentorálát órák száma',
             number: 20,
-            description: 'Lorem ipsum dol',
+            description: 'Tudásmegosztás',
         },
         {
             title: 'Tanfolyamok',
             number: 1,
-            description: 'Lorem ipsum dol',
+            description: 'Juniortól Szeniorig',
         },
         {
-            title: 'Mentorok',
+            title: 'Mentorok / Fejlesztők',
             number: 2,
-            description: 'Lorem ipsum dol',
+            description: 'Szakemberek',
         },
     ];
 

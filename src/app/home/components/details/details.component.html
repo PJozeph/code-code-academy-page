@@ -11,9 +11,11 @@
         <hr />
         <ion-row>
             <ion-col
-                size="8"
-                offset="2">
-                <ng-container [ngSwitch]="activeLayout">
+                size-md="8"
+                offset-md="2"
+                size-xs="10"
+                offset-xs="1">
+                <ng-container [ngSwitch]="selectedService">
                     <ng-container
                         *ngSwitchCase="'personal_mentor'"
                         [ngTemplateOutlet]="mentoring"></ng-container>
@@ -29,15 +31,17 @@
                 </ng-container>
             </ion-col>
         </ion-row>
-        <ion-row>
-            <ion-col
-                size-xl="6"
-                offset-xl="3"
-                size-sm="8"
-                offset-sm="2">
-                <form [formGroup]="formGroup">
-                    <ion-text color="text-darkest">
-                        <h1 class="ion-text-center">Regisztráció</h1>
+        <form
+            [formGroup]="formGroup"
+            (ngSubmit)="onSubmit()">
+            <ion-row>
+                <ion-col
+                    size-xl="6"
+                    offset-xl="3"
+                    size-sm="8"
+                    offset-sm="2">
+                    <ion-text color="primary">
+                        <h1 class="ion-text-center"><strong> Regisztráció</strong></h1>
                     </ion-text>
                     <ion-item>
                         <ion-input
@@ -54,22 +58,27 @@
                             label="Telefonszám"
                             formControlName="phone"></ion-input>
                     </ion-item>
-                </form>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col
-                class="ion-text-center"
-                size="6"
-                offset="3">
-                <ion-button
-                    shape="round"
-                    [disabled]="!formGroup.valid">
-                    Küldés</ion-button
-                >
-            </ion-col>
-        </ion-row>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col
+                    class="ion-text-center"
+                    size="6"
+                    offset="3">
+                    <ion-button
+                        type="submit"
+                        shape="round"
+                        [disabled]="!formGroup.valid">
+                        Küldés</ion-button
+                    >
+                </ion-col>
+            </ion-row>
+        </form>
     </ion-grid>
+    <hr>
+    <hr>
+    <hr>
+    <hr>
 </ion-content>
 <ion-footer no-padding>
     <ion-toolbar>

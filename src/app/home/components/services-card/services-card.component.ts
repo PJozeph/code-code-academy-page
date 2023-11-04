@@ -9,6 +9,7 @@ import { ServiceItem } from '../../modal/service.modal';
 })
 export class ServicesCardComponent {
     @Input() service: ServiceItem = {} as ServiceItem;
+    @Input() isDisabled: boolean = false;
 
     router: Router = inject(Router);
 

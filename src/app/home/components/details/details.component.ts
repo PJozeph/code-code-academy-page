@@ -1,6 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
+import { EmailRequest } from '../../modal/email-request-modal';
+import { EmailService } from '../../services/email.service';
 
 @Component({
     selector: 'app-details',
@@ -9,8 +11,10 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
     formBuilder: FormBuilder = inject(FormBuilder);
+    emailService: EmailService = inject(EmailService);
+
     activatedRoute: any = inject(ActivatedRoute);
-    public activeLayout: string = '';
+    public selectedService: string = '';
 
     public courseSubjects: string[] = [
         'JS alapok',
@@ -32,7 +36,7 @@ export class DetailsComponent implements OnInit {
         'NgRx',
     ];
 
-    formGroup = this.formBuilder.group({
+    formGroup = this.formBuilder.nonNullable.group({
         name: ['', Validators.required],
         email: ['', Validators.required],
         phone: ['', Validators.required],
@@ -42,7 +46,15 @@ export class DetailsComponent implements OnInit {
 
     ngOnInit() {
         this.activatedRoute.params.subscribe((params: Params) => {
-            this.activeLayout = params['id'];
+            this.selectedService = params['id'];
+        });
+    }
+
+    public onSubmit() {
+        const emailRequest: EmailRequest = this.formGroup.getRawValue();
+        emailRequest.subject = this.selectedService;
+        this.emailService.send(emailRequest).subscribe(() => {
+            this.formGroup.reset();
         });
     }
 }

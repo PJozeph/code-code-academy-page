@@ -13,11 +13,5 @@ export class NewsLetterComponent {
     });
 
     public onSubscribeClick(): void {
-        console.log(this.formGroup.value);
-        if (this.formGroup.valid) {
-            alert('Sikeres feliratkozás!');
-        } else {
-            alert('Sikertelen feliratkozás!');
-        }
     }
 }

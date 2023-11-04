@@ -6,10 +6,10 @@ import { Teacher } from '../../modal/teacher-modal';
     templateUrl: './teacher-card.component.html',
     styleUrls: ['./teacher-card.component.scss'],
 })
-export class TeacherCardComponent implements OnInit {
+export class TeacherCardComponent  {
     @Input() teacher: Teacher = {} as Teacher;
 
-    constructor() {}
-
-    ngOnInit() {}
+    onLinkClick(link: string) {
+        window.open(link, '_blank');
+    }
 }

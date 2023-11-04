@@ -1,4 +1,4 @@
-<ion-card>
+<ion-card [disabled]="isDisabled">
     <ion-card-content>
         <section class="card-container">
             <ion-avatar>
@@ -24,9 +24,9 @@
             <ion-button
                 fill="clear"
                 size="small"
-                color="warning"
+                color="text-darkest"
                 (click)="onDetailsClick()">
-                <ion-icon
+                <ion-icon color="text-darkest"
                     name="chevron-forward-outline"
                     slot="end"></ion-icon>
                 Részletek</ion-button

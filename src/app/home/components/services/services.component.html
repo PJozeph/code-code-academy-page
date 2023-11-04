@@ -38,14 +38,6 @@
             size-md="6"
             size-sm="6"
             size-xs="12">
-            <app-services-card [service]="services[1]"></app-services-card>
-        </ion-col>
-        <ion-col
-            size-xl="2"
-            size-lg="3"
-            size-md="6"
-            size-sm="6"
-            size-xs="12">
             <app-services-card [service]="services[2]"></app-services-card>
         </ion-col>
         <ion-col
@@ -54,7 +46,19 @@
             size-md="6"
             size-sm="6"
             size-xs="12">
-            <app-services-card [service]="services[3]"></app-services-card>
+            <app-services-card [service]="services[1]" [isDisabled]="true"></app-services-card>
+        </ion-col>
+        <ion-col
+            size-xl="2"
+            size-lg="3"
+            size-md="6"
+            size-sm="6"
+            size-xs="12"
+            offset-xl="0"
+            offset-md="3"
+            offset-sm="3"
+            offset-xs="0">
+            <app-services-card [service]="services[3]" [isDisabled]="true"></app-services-card>
         </ion-col>
     </ion-row>
 </ion-grid>

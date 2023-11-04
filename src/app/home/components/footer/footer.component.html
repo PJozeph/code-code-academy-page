@@ -1,17 +1,33 @@
 <ion-toolbar class="container">
     <div class="custom-row">
         <ion-icon
+            (click)="openUrl('https://www.linkedin.com/company/100714521')"
+            class="linkedin"
             size="small"
             name="logo-linkedin"></ion-icon>
         <ion-icon
+            (click)="openUrl('https://www.tiktok.com/@code.code.academy')"
+            class="tiktok"
             size="small"
             name="logo-tiktok"></ion-icon>
         <ion-icon
+            (click)="openUrl('https://www.facebook.com/profile.php?id=61551851502086')"
+            class="facebook"
             size="small"
             name="logo-facebook"></ion-icon>
+        <ion-icon
+            (click)="openUrl('https://www.youtube.com/channel/UCbg4RjIJbkTeUV-3CmQL6Eg')"
+            class="youtube"
+            name="logo-youtube"
+            size="small">
+        </ion-icon>
     </div>
     <div class="custom-row">
         <ion-text>©Copyright 2023, All Rights Reserved </ion-text>
-        <a [routerLink]="['aszf']"> ÁSZF </a>
+        <ion-text
+            (click)="onAszfClick()"
+            class="aszf"
+            >ÁSZF</ion-text
+        >
     </div>
 </ion-toolbar>
