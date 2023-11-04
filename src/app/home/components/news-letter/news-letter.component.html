@@ -16,9 +16,16 @@
                 size-md="6"
                 offset-md="3">
                 <ion-item>
+                    <div slot="end" *ngIf="isEmailSent">
+                        <ion-icon
+                            size="large"
+                            name="checkmark-circle-outline"
+                            color="success"></ion-icon>
+                    </div>
                     <ion-input
                         aria-label="Email"
-                        formControlName="email"></ion-input>
+                        formControlName="email">
+                    </ion-input>
                 </ion-item>
             </ion-col>
         </ion-row>
