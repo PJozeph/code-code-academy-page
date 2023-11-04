@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ServiceItem } from './modal/service.modal';
 import { Testimonial } from './modal/testimonial.modal';
 
 @Component({
