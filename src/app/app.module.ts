@@ -18,7 +18,7 @@ import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
         AppRoutingModule,
         HomePageModule,
         HttpClientModule,
-        NgxGoogleAnalyticsModule.forRoot('410471262'),
+        NgxGoogleAnalyticsModule.forRoot('G-H6D241Y6XL'),
     ],
     providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
     bootstrap: [AppComponent],
