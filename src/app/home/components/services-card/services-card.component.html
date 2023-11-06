@@ -19,14 +19,15 @@
                 size="small"
                 fill="outline"
                 shape="round"
-                >{{ service.price }} HUF / óra</ion-button
+                >{{ service.price }} HUF {{this.displayHour ? '/ óra' : '' }}</ion-button
             >
             <ion-button
                 fill="clear"
                 size="small"
                 color="text-darkest"
                 (click)="onDetailsClick()">
-                <ion-icon color="text-darkest"
+                <ion-icon
+                    color="text-darkest"
                     name="chevron-forward-outline"
                     slot="end"></ion-icon>
                 Részletek</ion-button

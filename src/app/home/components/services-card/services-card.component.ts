@@ -10,6 +10,8 @@ import { ServiceItem } from '../../modal/service.modal';
 export class ServicesCardComponent {
     @Input() service: ServiceItem = {} as ServiceItem;
     @Input() isDisabled: boolean = false;
+    @Input() displayHour: boolean = true;
+
 
     router: Router = inject(Router);
 
