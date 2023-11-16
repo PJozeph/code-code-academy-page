@@ -31,7 +31,7 @@ export class ServicesComponent implements OnInit {
         {
             title: 'Egyedi Fejlesztés',
             description: 'Egeyedi igények alapján fejlesztünk',
-            id: 'webapp_development',
+            id: 'custom_development',
             image: '../../../assets/background_code.png',
         },
     ];

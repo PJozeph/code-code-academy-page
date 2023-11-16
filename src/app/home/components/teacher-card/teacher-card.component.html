@@ -9,13 +9,14 @@
             {{ teacher.description }}
         </ion-text>
     </ion-card-content>
-    <div >
+    <div>
         <ion-icon
             name="logo-linkedin"
             size="small"
             class="ion-margin-horizontal linkedin"
             (click)="onLinkClick(teacher.linkedin)"></ion-icon>
         <ion-icon
+            *ngIf="teacher.github"
             name="logo-github"
             size="small"
             class="github"

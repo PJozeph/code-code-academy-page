@@ -3,5 +3,5 @@ export interface Teacher {
     description: string;
     image: string;
     linkedin: string;
-    github: string;
+    github?: string;
 }

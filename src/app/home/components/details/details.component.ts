@@ -42,6 +42,11 @@ export class DetailsComponent implements OnInit {
         'NgRx',
     ];
 
+    public customDevelopmentServices: string[] = [
+        'Egyedi weboldalak és webalkalmazások tervezése és fejlesztése',
+        'Üzleti szoftverek és rendszerek összekapcsolása a hatékonyabb működés és adatmegosztás érdekében',
+    ];
+
     formGroup = this.formBuilder.nonNullable.group({
         name: ['', Validators.required],
         email: ['', Validators.required],

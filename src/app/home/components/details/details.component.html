@@ -26,8 +26,8 @@
                         *ngSwitchCase="'course'"
                         [ngTemplateOutlet]="course"></ng-container>
                     <ng-container
-                        *ngSwitchCase="'software'"
-                        [ngTemplateOutlet]="mentoring"></ng-container>
+                        *ngSwitchCase="'custom_development'"
+                        [ngTemplateOutlet]="custom_development"></ng-container>
                 </ng-container>
             </ion-col>
         </ion-row>
@@ -41,7 +41,11 @@
                     size-sm="8"
                     offset-sm="2">
                     <ion-text color="primary">
-                        <h1 class="ion-text-center"><strong> Regisztráció</strong></h1>
+                        <h1 class="ion-text-center">
+                            <strong>
+                                {{ selectedService === 'custom_development' ? 'Kapcsolat' : 'Regisztráció' }}
+                            </strong>
+                        </h1>
                     </ion-text>
                     <ion-item>
                         <ion-input
@@ -90,6 +94,18 @@
         <app-footer></app-footer>
     </ion-toolbar>
 </ion-footer>
+
+<ng-template #custom_development>
+    <div class="ion-text-center">
+        <ion-text color="primary">
+            <h1 class="ion-text-center"><strong>Egyedi IT Igények, Egyedi Megoldások</strong></h1>
+        </ion-text>
+        <hr />
+        <ion-text>
+            Cégünk szakértő webfejlesztő és design csapattal rendelkezik, akik a következőkben segíthetnek:
+        </ion-text>
+    </div>
+</ng-template>
 
 <ng-template #course>
     <div class="ion-text-center">
